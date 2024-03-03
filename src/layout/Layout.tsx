@@ -11,14 +11,7 @@ export const Layout = () => {
   return (
     <div className={cx('layout', 'h-full w-full flex flex-row flex-nowrap')}>
       <Sidebar />
-      <div
-        className={cx(
-          'route-container',
-          'h-full overflow-x-hidden overflow-y-auto bg-cover',
-          routePadding ? '' : 'py-8 px-0 sm:px-8  pt-[70px]',
-          'w-full sm:w-[calc(100%-200px)]',
-        )}
-      >
+      <div>
         <Outlet />
       </div>
     </div>
