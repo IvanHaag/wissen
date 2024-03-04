@@ -1,3 +1,6 @@
+import {SidebarContext} from '../SidebarProvider';
+import {useContext} from 'react';
+
 export const Header = () => {
   return (
     <div>

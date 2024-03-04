@@ -20,7 +20,7 @@
     },
     "types": ["vite-plugin-svgr/client"]
   },
-  "include": ["src", "src copy/main.tsx", "src copy/vite-env.d.ts"],
-  "exclude": ["./src/types/graphql-global-types.ts"],
+  "include": ["src", "src copy/main.tsx", "src copy/vite-env.d.ts", "tailwind.config.js"],
+  "exclude": [],
   "references": [{"path": "./tsconfig.node.json"}]
 }
