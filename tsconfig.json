@@ -22,5 +22,6 @@
   },
   "include": ["src", "src copy/main.tsx", "src copy/vite-env.d.ts", "tailwind.config.js"],
   "exclude": [],
-  "references": [{"path": "./tsconfig.node.json"}]
+  "references": [{"path": "./tsconfig.node.json"}],
+  "eslintPath": "./node_modules/eslint"
 }
