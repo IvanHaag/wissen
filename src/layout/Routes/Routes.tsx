@@ -4,8 +4,6 @@ import {
   Route,
   Routes as ReactRouterDomRoutes,
 } from 'react-router-dom'
-
-import { Header } from '../Header/Header'
 import { Layout } from '../Layout'
 import type { Route as RouteType } from './allRoutes'
 
@@ -21,7 +19,6 @@ export const Routes = () => {
 
   return (
     <div>
-      <Header />
       <ReactRouterDomRoutes>
         {filterRoutes.map((route) => (
           <Route element={<Layout />} key={`route-${route.path}`}>

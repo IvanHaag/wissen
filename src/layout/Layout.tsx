@@ -5,7 +5,7 @@ import { Header } from './Header/Header'
 export const Layout = () => {
   return (
     <div className={cx('layout', 'h-full w-full flex flex-row flex-nowrap')}>
-      {/* <Header /> */}
+      <Header />
       <div>
         <Sidebar />
       </div>
