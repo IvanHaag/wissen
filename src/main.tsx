@@ -2,6 +2,7 @@ import ReactDOM from 'react-dom/client'
 import { SidebarProvider } from './layout/Sidebar/SidebarProvider'
 import { BrowserRouter } from 'react-router-dom'
 import { Routes } from '@/layout/Routes/Routes'
+import './index.scss'
 
 const MainApp = () => {
   return (

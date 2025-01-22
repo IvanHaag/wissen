@@ -21,5 +21,11 @@ export default defineConfig({
       exclude: [],
     }),
   ],
-  css: {postcss}
+  css: {
+    preprocessorOptions: {
+      scss: {
+        quietDeps: true,
+      },
+    },
+  },
 })

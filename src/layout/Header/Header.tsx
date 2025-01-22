@@ -1,9 +1,10 @@
 import Logo from '@/assets/images/ExtendedLogo.webp'
+import { cx } from 'class-variance-authority'
 
 export const Header = () => {
   return (
-    <div>
-      <div className="bg-gray-700 border-2 border-black">
+    <div className="bg-red-600">
+      <div className="">
         <img src={Logo} alt="Logo" />
       </div>
     </div>
