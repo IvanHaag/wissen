@@ -1,14 +1,13 @@
 import ReactDOM from 'react-dom/client'
+import { SidebarProvider } from './layout/Sidebar/SidebarProvider'
 import { BrowserRouter } from 'react-router-dom'
-
-import { Routes } from './layout/Routes/Routes'
-import { SidebarProvider } from './layout/SidebarProvider'
+import { Routes } from '@/layout/Routes/Routes'
 
 const MainApp = () => {
   return (
     <SidebarProvider>
       <BrowserRouter>
-        <div />
+        <div id="app-modal" />
         <Routes />
       </BrowserRouter>
     </SidebarProvider>

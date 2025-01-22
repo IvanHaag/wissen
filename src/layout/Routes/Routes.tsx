@@ -24,7 +24,9 @@ export const Routes = () => {
       <Header />
       <ReactRouterDomRoutes>
         {filterRoutes.map((route) => (
-          <Route element={<Layout />}></Route>
+          <Route element={<Layout />} key={`route-${route.path}`}>
+            <Route path={route.path} element={route.component} />
+          </Route>
         ))}
       </ReactRouterDomRoutes>
     </div>
