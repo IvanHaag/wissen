@@ -11,7 +11,11 @@ export const Sidebar = () => {
 
   return (
     //ADJUST "Z" FOR SIDEBAR
-    <div className={cx('fixed h-full')}>
+    <div
+      className={cx(
+        'h-full w-72 bg-primary-50 z-0 fixed p-4 drop-shadow-lg bg-opacity-60'
+      )}
+    >
       {filteredRoutes.map((route) => {
         if (!route.sidebar) return null
         return (
@@ -46,13 +50,16 @@ const SidebarNavLink = ({
 }) => {
   return (
     <NavLink
-      className="flex flex-row items-center"
+      className={cx(
+        'flex flex-row flex-nowrap h-[50px] items-center',
+        'pl-4 w-2xs rounded-2xl bg-primary-500 bg-opacity-60'
+      )}
       to={path}
       key={`nav-link-${path}`}
       onClick={setSidebarOpen}
     >
       <div />
-      <div>{icon}</div>
+      <div className="pr-2">{icon}</div>
       {title}
     </NavLink>
   )

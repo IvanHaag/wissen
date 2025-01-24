@@ -270,6 +270,11 @@
   resolved "https://registry.npmjs.org/@eslint/js/-/js-8.57.1.tgz"
   integrity sha512-d9zaMRSTIKDLhctzH12MtXvJKSSUhaHcjV+2Z+GK+EEY7XKpP5yR4x+N3TAcHTcu963nIr+TMcCb4DBCYX1z6Q==
 
+"@fontsource/asap@^5.1.1":
+  version "5.1.1"
+  resolved "https://registry.npmjs.org/@fontsource/asap/-/asap-5.1.1.tgz"
+  integrity sha512-JaL1CunwYUQbk/GT/pLbutyfQO2ZgWA5nBKuV/vweRk3aTrfg6XJ456zpFjxoAjx0MIxAfCyHKFCp4sFaoI6pg==
+
 "@graphql-typed-document-node/core@^3.1.1":
   version "3.2.0"
   resolved "https://registry.npmjs.org/@graphql-typed-document-node/core/-/core-3.2.0.tgz"
