@@ -6,6 +6,8 @@ import {
 } from 'react-router-dom'
 import { Layout } from '../Layout'
 import type { Route as RouteType } from './allRoutes'
+import { allRoutes } from './allRoutes'
+import { cx } from 'class-variance-authority'
 
 const initialRoutes: RouteType[] = [
   {
@@ -15,12 +17,11 @@ const initialRoutes: RouteType[] = [
 ]
 
 export const Routes = () => {
-  const [filterRoutes, setFilterRoutes] = useState<RouteType[]>(initialRoutes)
-
+  const [filteredRoutes, setFilterRoutes] = useState<RouteType[]>(allRoutes)
   return (
-    <div>
+    <div className={cx('w-full h-full')}>
       <ReactRouterDomRoutes>
-        {filterRoutes.map((route) => (
+        {filteredRoutes.map((route) => (
           <Route element={<Layout />} key={`route-${route.path}`}>
             <Route path={route.path} element={route.component} />
           </Route>

@@ -3,6 +3,7 @@ import { useContext } from 'react'
 import { SidebarContext } from './SidebarProvider'
 import { NavLink } from 'react-router-dom'
 import { cx } from 'class-variance-authority'
+import { Text } from '@/common/Text/Text'
 
 export const Sidebar = () => {
   const { sidebarOpen, setSidebarOpen, layout } = useContext(SidebarContext)
@@ -13,7 +14,7 @@ export const Sidebar = () => {
     //ADJUST "Z" FOR SIDEBAR
     <div
       className={cx(
-        'h-full w-72 bg-primary-50 z-0 fixed p-4 drop-shadow-lg bg-opacity-60'
+        'h-full w-72 bg-primary-50 z-0 px-3 pb-4 pt-7 drop-shadow-lg bg-opacity-70'
       )}
     >
       {filteredRoutes.map((route) => {
@@ -60,7 +61,7 @@ const SidebarNavLink = ({
     >
       <div />
       <div className="pr-2">{icon}</div>
-      {title}
+      <Text size={'lg'}>{title}</Text>
     </NavLink>
   )
 }

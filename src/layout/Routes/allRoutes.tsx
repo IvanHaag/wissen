@@ -30,8 +30,8 @@ export const allRoutes: Route[] = [
     path: ROUTE_PATHS.ROOT,
     component: <Dashboard />,
     sidebar: {
-      icon: <Grid size={30} />,
-      title: 'Panel',
+      icon: <Home size={30} />,
+      title: 'Inicio',
     },
   },
 ]
