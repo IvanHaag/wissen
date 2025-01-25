@@ -20,3 +20,49 @@ code {
 html {
   font-family: Asap, 'sans-serif';
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  padding: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(white, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 9999px;
+  background: rgba(#093048, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(#ffba07, 0.8);
+}
+
+.table {
+  > table {
+    > tbody {
+      > tr {
+        /* borders */
+        &:last-child > td {
+          &:first-child {
+            border-bottom-left-radius: 0.5rem;
+          }
+          &:last-child {
+            border-bottom-right-radius: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Sidebar.scss
+.sidebar {
+  a {
+    &.active {
+      font-weight: bold;
+    }
+  }
+}

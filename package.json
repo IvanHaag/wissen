@@ -13,6 +13,7 @@
   "dependencies": {
     "@apollo/client": "^3.12.6",
     "@fontsource/asap": "^5.1.1",
+    "@tanstack/react-table": "^8.20.6",
     "@typescript-eslint/eslint-plugin": "^8.19.1",
     "@typescript-eslint/parser": "^8.19.1",
     "class-variance-authority": "^0.5.1",
@@ -28,6 +29,7 @@
     "react-feather": "^2.0.10",
     "react-number-format": "^5.4.3",
     "react-router-dom": "^6.6.1",
+    "react-table": "^7.8.0",
     "sass": "^1.56.0",
     "vite-plugin-eslint": "^1.8.1",
     "vite-plugin-svgr": "^4.0.0"

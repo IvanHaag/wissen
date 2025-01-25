@@ -63,12 +63,22 @@ export const MoneyText = ({
   className,
   ...rest
 }: TextProps) => {
+  const amount = Number(children)
   return (
     <NumericFormat
       displayType="text"
       decimalSeparator=","
       thousandSeparator="."
-      value={typeof children === 'string' ? children : String(children)}
+      value={Math.abs(amount)}
+      prefix={amount < 0 ? '- $' : '$ '}
+      renderText={(formattedValue) => (
+        <span
+        // className={amount < 0 ? 'text-red-500' : 'text-green-500'} // Add conditional styling
+        >
+          {formattedValue}
+        </span>
+      )}
+      allowNegative={false}
     />
   )
 }

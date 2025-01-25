@@ -49,19 +49,26 @@ const SidebarNavLink = ({
   specialIcon?: boolean
   setSidebarOpen: () => void
 }) => {
+  console.log('NavLink Path:', path)
+  console.log('Current Route:', window.location.pathname)
   return (
     <NavLink
-      className={cx(
-        'flex flex-row flex-nowrap h-[50px] items-center',
-        'pl-4 w-2xs rounded-2xl bg-primary-500 bg-opacity-60'
-      )}
+      className={({ isActive }) =>
+        cx(
+          'flex flex-row flex-nowrap h-[50px] items-center',
+          'pl-4 w-2xs rounded-2xl bg-opacity-60 hover:bg-primary-200',
+          isActive ? 'bg-primary-500' : ''
+        )
+      }
       to={path}
       key={`nav-link-${path}`}
       onClick={setSidebarOpen}
+      end
     >
-      <div />
-      <div className="pr-2">{icon}</div>
-      <Text size={'lg'}>{title}</Text>
+      <div className="flex flex-row">
+        <div className="pr-2">{icon}</div>
+        <Text size={'lg'}>{title}</Text>
+      </div>
     </NavLink>
   )
 }
