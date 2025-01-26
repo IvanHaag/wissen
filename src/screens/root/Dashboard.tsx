@@ -85,11 +85,13 @@ export const Dashboard = () => {
               </Button>
             </div>
           </RouteCard>
-          <Table
-            data={transactions || []}
-            columns={getColumns()}
-            emptyDataText="No hay transacciones en esta cuenta"
-          />
+          <div>
+            <Table
+              data={transactions || []}
+              columns={getColumns()}
+              emptyDataText="No hay transacciones en esta cuenta"
+            />
+          </div>
         </div>
       </div>
     </RouteCard>

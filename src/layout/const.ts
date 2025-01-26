@@ -6,4 +6,5 @@ export enum ROUTE_PATHS {
   CURRENCY_EXCHANGE = '/intercambio_de_monedas',
   INVESTMENTS = '/inversiones',
   SERVICES = '/servicios',
+  SETTINGS = '/configuracion',
 }

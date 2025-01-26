@@ -3,8 +3,12 @@
 @tailwind utilities;
 @import '@fontsource/asap';
 
+$success-color: #12b21a;
+$danger-color: #d51010;
+
 html,
-body {
+body,
+#root {
   height: 100%;
   width: 100%;
   margin: 0;

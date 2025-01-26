@@ -15,7 +15,7 @@ export const RouteCard = ({
   return (
     <div
       className={`p-6 py-4 my-4 bg-white rounded-3xl bg-opacity-70 drop-shadow-lg ${
-        fullSize ? 'w-full h-full mx-4' : 'w-auto h-auto'
+        fullSize ? 'w-full h-full mx-4' : 'w-auto'
       } ${className || ''}`}
     >
       {children}

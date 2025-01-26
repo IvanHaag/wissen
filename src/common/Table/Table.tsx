@@ -107,7 +107,7 @@ export const Table = <DataType,>(props: TableProps<DataType>) => {
   }
 
   return (
-    <div className="w-full overflow-auto">
+    <div className="w-full overflow-x-auto">
       <div className="table">
         <table className="border-separate border-spacing-0">
           <thead className="box-shadow-sm">

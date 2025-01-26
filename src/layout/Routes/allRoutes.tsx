@@ -5,6 +5,7 @@ import {
   Droplet,
   Home,
   Repeat,
+  Settings,
   ShoppingCart,
   TrendingUp,
 } from 'react-feather'
@@ -95,6 +96,14 @@ export const allRoutes: Route[] = [
     sidebar: {
       icon: <ShoppingCart size={30} />,
       title: 'Servicios',
+    },
+  },
+  {
+    path: ROUTE_PATHS.SETTINGS,
+    component: <></>,
+    sidebar: {
+      icon: <Settings size={30} />,
+      title: 'Configuración',
     },
   },
 ]

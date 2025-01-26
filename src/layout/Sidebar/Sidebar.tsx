@@ -4,34 +4,65 @@ import { SidebarContext } from './SidebarProvider'
 import { NavLink } from 'react-router-dom'
 import { cx } from 'class-variance-authority'
 import { Text } from '@/common/Text/Text'
+import { LogOut } from 'react-feather'
+import { ROUTE_PATHS } from '../const'
 
 export const Sidebar = () => {
   const { sidebarOpen, setSidebarOpen, layout } = useContext(SidebarContext)
 
-  const filteredRoutes = allRoutes.filter((route) => route.sidebar)
+  const filteredRoutes = allRoutes.filter(
+    (route) => route.sidebar && route.path !== ROUTE_PATHS.SETTINGS
+  )
+  const settingsRoute = allRoutes.find(
+    (route) => route.sidebar && route.path === ROUTE_PATHS.SETTINGS
+  )
 
   return (
     //ADJUST "Z" FOR SIDEBAR
     <div
       className={cx(
-        'h-full w-72 bg-primary-50 z-0 px-3 pb-4 pt-7 drop-shadow-lg bg-opacity-70'
+        'h-full w-72 bg-primary-50 z-0 px-3 pb-4 pt-7 drop-shadow-lg bg-opacity-70 flex flex-col flex-0 overflow-hidden '
       )}
     >
-      {filteredRoutes.map((route) => {
-        if (!route.sidebar) return null
-        return (
+      <div className="flex flex-col flex-1 ">
+        {filteredRoutes.map((route) => {
+          if (!route.sidebar) return null
+          return (
+            <SidebarNavLink
+              key={`nav-link-${route.path}`}
+              path={route.path}
+              title={route.sidebar.title}
+              icon={route.sidebar.icon}
+              specialIcon={route.sidebar.specialIcon}
+              setSidebarOpen={() => {
+                setSidebarOpen(!sidebarOpen)
+              }}
+            />
+          )
+        })}
+      </div>
+      {/* Settings item at the bottom */}
+      <div className="mt-auto">
+        {settingsRoute?.sidebar && (
           <SidebarNavLink
-            key={`nav-link-${route.path}`}
-            path={route.path}
-            title={route.sidebar.title}
-            icon={route.sidebar.icon}
-            specialIcon={route.sidebar.specialIcon}
+            path={`nav-link-${settingsRoute.path}`}
+            title={settingsRoute.sidebar.title}
+            icon={settingsRoute.sidebar.icon}
+            specialIcon={settingsRoute.sidebar.specialIcon}
             setSidebarOpen={() => {
               setSidebarOpen(!sidebarOpen)
             }}
           />
-        )
-      })}
+        )}
+      </div>
+      <div className="flex flex-row pl-4 h-[50px] items-center text-red-600">
+        <div className="pr-2">
+          <LogOut size={30} />
+        </div>
+        <Text size={'lg'} color={'danger'}>
+          Cerrar sesión
+        </Text>
+      </div>
     </div>
   )
 }
@@ -42,22 +73,23 @@ const SidebarNavLink = ({
   icon,
   specialIcon,
   setSidebarOpen,
+  specialClass,
 }: {
   path: string
   title: string
   icon: React.ReactNode
   specialIcon?: boolean
+  specialClass?: string
   setSidebarOpen: () => void
 }) => {
-  console.log('NavLink Path:', path)
-  console.log('Current Route:', window.location.pathname)
   return (
     <NavLink
       className={({ isActive }) =>
         cx(
           'flex flex-row flex-nowrap h-[50px] items-center',
           'pl-4 w-2xs rounded-2xl bg-opacity-60 hover:bg-primary-200',
-          isActive ? 'bg-primary-500' : ''
+          isActive ? 'bg-primary-500' : '',
+          specialClass
         )
       }
       to={path}
