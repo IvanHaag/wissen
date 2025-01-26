@@ -21,7 +21,7 @@ export const Sidebar = () => {
     //ADJUST "Z" FOR SIDEBAR
     <div
       className={cx(
-        'h-full w-72 bg-primary-50 z-0 px-3 pb-4 pt-7 drop-shadow-lg bg-opacity-70 flex flex-col flex-0 overflow-hidden '
+        'h-full pt-20 w-72 bg-primary-50 z-0 px-3 pb-4 drop-shadow-lg bg-opacity-70 flex flex-col flex-0 overflow-hidden '
       )}
     >
       <div className="flex flex-col flex-1 ">

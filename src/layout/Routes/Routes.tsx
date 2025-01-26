@@ -8,6 +8,7 @@ import { Layout } from '../Layout'
 import type { Route as RouteType } from './allRoutes'
 import { allRoutes } from './allRoutes'
 import { cx } from 'class-variance-authority'
+import { Header } from '../Header/Header'
 
 const initialRoutes: RouteType[] = [
   {
@@ -19,7 +20,8 @@ const initialRoutes: RouteType[] = [
 export const Routes = () => {
   const [filteredRoutes, setFilterRoutes] = useState<RouteType[]>(allRoutes)
   return (
-    <div className={cx('w-full h-full')}>
+    <div className="w-full h-full">
+      <Header />
       <ReactRouterDomRoutes>
         {filteredRoutes.map((route) => (
           <Route element={<Layout />} key={`route-${route.path}`}>
