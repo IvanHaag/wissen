@@ -3,7 +3,6 @@ import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import eslintPlugin from 'vite-plugin-eslint'
 import svgr from 'vite-plugin-svgr'
-import postcss from './postcss.config.js'
 
 // https://vitejs.dev/config/
 export default defineConfig({
