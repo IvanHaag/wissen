@@ -1,0 +1,21 @@
+@import 'tailwindcss';
+@import './other.scss';
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background: url('/src/assets/images/Abstract.png') no-repeat center center
+    fixed;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+html {
+  font-family: Asap, 'sans-serif';
+}

@@ -6,25 +6,6 @@
 $success-color: #12b21a;
 $danger-color: #d51010;
 
-html,
-body,
-#root {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  background: url('/src/assets/images/Abstract.png') no-repeat center center
-    fixed;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-html {
-  font-family: Asap, 'sans-serif';
-}
-
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
