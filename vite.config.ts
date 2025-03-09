@@ -3,6 +3,7 @@ import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import eslintPlugin from 'vite-plugin-eslint'
 import svgr from 'vite-plugin-svgr'
+import tailwindcss from '@tailwindcss/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -19,6 +20,7 @@ export default defineConfig({
       include: ['./src/**/*.js', './src/**/*.jsx'],
       exclude: [],
     }),
+    tailwindcss(),
   ],
   css: {
     preprocessorOptions: {
