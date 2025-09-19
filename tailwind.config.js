@@ -1,6 +1,9 @@
-import { defineConfig } from '@tailwindcss/vite'
-
-export default defineConfig({
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     extend: {
       colors: {
@@ -23,4 +26,13 @@ export default defineConfig({
       },
     },
   },
-})
+  safelist: [
+    'bg-primary-200',
+    'bg-primary-500',
+    'hover:bg-primary-200',
+    {
+      pattern: /(bg|text|border)-primary-\d{2,3}/,
+    },
+  ],
+  plugins: [],
+}

@@ -1,6 +1,25 @@
 @import "tailwindcss";
 @import '@fontsource/asap';
 
+@theme {
+  --color-primary-50: #F8F8F8;
+  --color-primary-100: #F9ECC8;
+  --color-primary-200: #FBDF98;
+  --color-primary-300: #FCD367;
+  --color-primary-400: #FEC637;
+  --color-primary-500: #FFBA07;
+  --color-primary-600: #CC9709;
+  --color-primary-700: #9A740B;
+  --color-primary-800: #67520E;
+  --color-primary-900: #352F10;
+  --color-primary-950: #020C12;
+}
+
+$primary-color: #FFBA07;
+$secondary-color: #393939;
+$primary-dark-color: #25282d;
+$primary-light-color: #FBDF98;
+$border-gray: #cbcbcb;
 $success-color: #12b21a;
 $danger-color: #d51010;
 

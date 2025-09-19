@@ -17,7 +17,7 @@ export const RouteCard = ({
       className={cx(
         'bg-white bg-opacity-70 drop-shadow-lg',
         'p-6 py-4 my-4 rounded-3xl',
-        fullSize ? 'w-full h-full mx-4' : 'w-auto',
+        fullSize ? 'w-full mx-4' : 'w-auto',
         className
       )}
     >
