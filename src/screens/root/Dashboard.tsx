@@ -1,6 +1,7 @@
 import { RouteCard } from '@/common/Card/RouteCard'
+import { Card } from '@/common/Card/Card'
 import { Text } from '@/common/Text/Text'
-import { SquareContainer } from '@/common/SquareContainer/SquareContainer'
+import { CircleContainer} from '@/common/CircleContainer/CircleContainer'
 import { CURRENCIES } from '@/common/const'
 import { accounts, Transaction } from '@/common/TestData'
 import { PatternFormat } from 'react-number-format'
@@ -9,6 +10,8 @@ import { Button } from '@/common/Button/Button'
 import { Table } from '@/common/Table/Table'
 import { transactions } from '@/common/TestData'
 import { createColumnHelper } from '@tanstack/react-table'
+import { BigButton } from '@/common/Button/BigButton'
+
 
 export const Dashboard = () => {
   const columnHelper = createColumnHelper<Transaction>()
@@ -52,22 +55,22 @@ export const Dashboard = () => {
         <Text size={'4xl'} weight={'bold'}>
           Cuenta Principal
         </Text>
-        <div className="inline-block">
-          <RouteCard fullSize={false} className="">
+        <div className="">
+          <Card className="bg-gradient-to-r from-yellow-400/90 to-yellow-500/90 drop-shadow-lg">
             <div className="flex items-center">
-              <SquareContainer className="flex flex-col items-center">
+              <CircleContainer className="flex flex-col items-center">
                 <Text size={'3xl'} weight={'extrabold'} color={'white'}>
                   C A
                 </Text>
                 <Text size={'3xl'} weight={'black'} color={'white'}>
                   {CURRENCIES.ARS}
                 </Text>
-              </SquareContainer>
-              <div className="mx-8">
-                <Text size={'2xl'} weight={'bold'}>
+              </CircleContainer>
+              <div className="mx-8 flex-grow ">
+                <Text size={'3xl'} weight={'extrabold'} color={'white'}>
                   <MoneyText>{accounts[0].amount}</MoneyText>
                 </Text>
-                <Text weight={'light'} color={'gray'}>
+                <Text size={'lg'} weight={'light'} color={'white'}>
                   Caja de ahorro en pesos{' '}
                   <PatternFormat
                     format="######-####"
@@ -77,14 +80,17 @@ export const Dashboard = () => {
                 </Text>
               </div>
               <Button
-                color="yellow"
                 onClick={() => {}}
-                className="flex self-end"
+                className="flex self-end borde-4 border-white text-yellow-500 hover:bg-yellow-100 hover:text-yellow-600 mr-4 text-xl"
+                color="white"
               >
                 Detalles
               </Button>
             </div>
-          </RouteCard>
+          </Card>
+          <BigButton><></></BigButton>
+          <BigButton></BigButton>
+          <BigButton></BigButton>
           <div>
             <Table
               data={transactions || []}

@@ -6,6 +6,7 @@ import { cx } from 'class-variance-authority'
 import { Text } from '@/common/Text/Text'
 import { LogOut } from 'react-feather'
 import { ROUTE_PATHS } from '../const'
+import Logo from '@/assets/images/smallExtendedLogo2.webp'
 
 export const Sidebar = () => {
   const { sidebarOpen, setSidebarOpen, layout } = useContext(SidebarContext)
@@ -24,6 +25,10 @@ export const Sidebar = () => {
         'h-full w-72 bg-primary-200 px-3 pb-4 drop-shadow-lg bg-opacity-70 overflow-hidden flex flex-col'
       )}
     >
+      {/* Logo at the top */}
+      <div className="flex items-center justify-center h-16 flex-shrink-0">
+        <img src={Logo} alt="Logo" />
+      </div>
       <div className="flex flex-col flex-1 ">
         {filteredRoutes.map((route) => {
           if (!route.sidebar) return null
