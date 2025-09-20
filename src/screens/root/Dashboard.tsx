@@ -85,9 +85,13 @@ export const Dashboard = () => {
   return (
     <RouteCard>
       <div>
-        <Text size={'4xl'} weight={'bold'}>
-          Cuenta Principal
-        </Text>
+         <div className='flex justify-between items-center'>
+
+          <Text size={'4xl'} weight={'bold'}>
+            Cuenta Principal
+          </Text>
+          <Button color={'gradient'}><Plus color='white' className='mr-2'/>Nueva transferencia</Button>
+          </div>
         <div className="">
           <Card className="bg-gradient-to-r from-yellow-500/90 to-orange-500/90 drop-shadow-lg">
             <div className="flex items-center">
@@ -114,8 +118,8 @@ export const Dashboard = () => {
               </div>
               <Button
                 onClick={() => {}}
-                className="flex self-end mr-4 text-md text-orange-600 border-white borde-4 hover:bg-orange-100"
-                color="white"
+                className="flex self-end mr-4 text-md h-12"
+                color="white-orange"
               >
                 DETALLES
               </Button>
@@ -124,7 +128,7 @@ export const Dashboard = () => {
           <div className="flex pb-4">
             <BigButton className="w-1/3 p-4">
               <div className="p-2 mr-4 bg-green-200/60 rounded-xl">
-                <ArrowDownLeft size={44} color="green" />
+                <ArrowDownLeft size={44} color="darkgreen" />
               </div>
               <Text weight={'medium'} size={'2xl'}>
                 Ingresar Dinero
@@ -132,7 +136,7 @@ export const Dashboard = () => {
             </BigButton>
             <BigButton className="w-1/3 p-4 mx-6">
               <div className="p-2 mr-4 bg-blue-200/60 rounded-xl">
-                <ArrowUpRight size={44} color="blue" />
+                <ArrowUpRight size={44} color="darkblue" />
               </div>
               <Text weight={'medium'} size={'2xl'}>
                 Enviar Dinero
