@@ -147,7 +147,7 @@ export const Dashboard = () => {
                 <Plus size={44} color="purple" />
               </div>
               <Text weight={'medium'} size={'2xl'}>
-                Enviar Dinero
+                Pagar servicio
               </Text>
             </BigButton>
           </div>
