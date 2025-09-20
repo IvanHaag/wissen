@@ -7,7 +7,8 @@ const buttonStyles = cva(
   cx(
     'flex items-center justify-center relative',
     'outline-none cursor-pointer rounded-lg px-2',
-    'text-white border select-none'
+    'text-white border select-none',
+    'min-w-28 h-12'
   ),
   {
     variants: {
